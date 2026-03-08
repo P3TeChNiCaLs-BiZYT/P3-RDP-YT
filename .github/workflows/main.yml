@@ -25,13 +25,6 @@ pip install pyautogui --quiet
 pip install telegraph --quiet
 
 REM Install applications silently
-echo Installing Telegram...
-"C:\Users\Public\Desktop\Telegram.exe" /VERYSILENT /NORESTART
-del "C:\Users\Public\Desktop\Telegram.exe"
-
-echo Installing WinRAR...
-"C:\Users\Public\Desktop\Winrar.exe" /S
-del "C:\Users\Public\Desktop\Winrar.exe"
 
 REM Clean desktop shortcuts
 del /f "C:\Users\Public\Desktop\Epic Games Launcher.lnk" 2>nul
