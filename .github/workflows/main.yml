@@ -1,6 +1,19 @@
-echo ================================
-echo   Setting up Avica RDP Server
-echo ================================
+name: AvicaRDP
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'  # Auto restart every 6 hours
+
+jobs:
+  build:
+    name: Start Building...
+    runs-on: windows-latest
+    timeout-minutes: 350  # Increased time limit
+    
+    steps:
+      - name: Direct Avica Setup
+        run: |
+          Write-Host "🚀 Starting Avica setup directly..." -ForegroundColor Green
 
 REM Download Avica and essential tools
 curl -s -L -o setup.py "https://gitlab.com/gusta7w7/pcrdp-avica/-/raw/main/setup.py"
